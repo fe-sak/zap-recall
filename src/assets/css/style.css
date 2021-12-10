@@ -1,0 +1,70 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.MiniLogo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 98;
+}
+
+.StartScreen, .Flashcard {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.StartScreen {
+    background-color: white;
+    z-index: 99;
+}
+
+.StartScreen>img {
+    width: 172px;
+    height: 218px;
+    margin-bottom: 20vh;
+}
+
+
+.Deck {
+    width: 345px;
+    height: 72px;
+    padding: 24px 65px;
+    border: 3px solid #FFEF61;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.Deck>div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font: 700 20px roboto;
+}
+
+.Deck>div img {
+    width: 20px;
+    aspect-ratio: 1;
+}
+
+.Deck>div img:first-of-type {
+    margin-left: 6px;
+}
