@@ -1,20 +1,20 @@
 import { useState } from "react";
-import Flashcard from "./FlashCard";
 import MiniLogo from "./LogoMini";
 import StartScreen from "./StartScreen";
 
 export default function App() {
-    const [currentScreen, setCurrentScreen] = useState('StartScreen');
+    const [currentScreen, setCurrentScreen] = useState(<StartScreen setCurrentScreenCall={setCurrentScreenCall} />);
 
-    const screens = {
-        StartScreen: <StartScreen setCurrentScreen={setCurrentScreen} />,
-        Flashcard: <Flashcard setCurrentScreen={setCurrentScreen} />,
-    };
+    function setCurrentScreenCall(component) {
+        return setCurrentScreen(component);
+    }
+
+
     return (
         <>
             <main>
                 <MiniLogo />
-                {screens[currentScreen]}
+                {currentScreen}
             </main>
         </>
     )

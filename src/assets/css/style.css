@@ -22,7 +22,7 @@ main {
     z-index: 98;
 }
 
-.StartScreen, .Flashcard {
+.StartScreen, .Flashcards {
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -67,4 +67,44 @@ main {
 
 .Deck>div img:first-of-type {
     margin-left: 6px;
+}
+
+.Flashcards {
+    width: 392px;
+    height: 575.75px;
+    position: relative;
+    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.12);
+    word-break: break-word;
+    padding: 50px 50px;
+}
+
+#counter {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    font: 400 18px roboto;
+}
+
+#question {
+    font: 700 28px roboto;
+}
+
+#flashcardHeader {
+    font: 700 12px roboto;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+
+#answer {
+    font: 400 16px roboto;
+}
+
+#button {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    cursor: pointer;
 }
