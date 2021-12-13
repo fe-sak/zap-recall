@@ -5,12 +5,10 @@ export default function FlashcardsScreen({ children: selectedDeck, setCurrentScr
     const [counter, setCounter] = useState(1);
 
     return (
-        <div className="Flashcards">
-            <Flashcard setCurrentScreenCall={setCurrentScreenCall}>
-                {counter}
-                {selectedDeck}
-                {"question"}
-            </Flashcard>
-        </div>
+        <Flashcard setCurrentScreenCall={setCurrentScreenCall}>
+            {counter}
+            {setCounter}
+            {selectedDeck}
+        </Flashcard>
     )
 }
