@@ -5,14 +5,13 @@ import { useState } from "react/cjs/react.development";
 import SuccessScreen from "./SuccessScreen";
 import FailureScreen from "./FailureScreen";
 
-let incorrectFlag = false;
+let correct = 0;
 
-export default function Flashcard({ children: [counter, setCounter, selectedDeck], setCurrentScreenCall }) {
+export default function Flashcard({ children: [counter, setCounter, selectedDeck, goal], setCurrentScreenCall }) {
     const [questionOrAnswer, setQuestionOrAnswer] = useState("question");
     const [FlashcardState, setFlashcardState] = useState("Flashcards");
 
-    if (FlashcardState === "Flashcards incorrect") incorrectFlag = true;
-    console.log(incorrectFlag)
+    if (FlashcardState === "Flashcards zap") correct++;
 
     function setFlashcardStateCall(state) {
         return setFlashcardState(state)
@@ -46,8 +45,8 @@ export default function Flashcard({ children: [counter, setCounter, selectedDeck
                 setFlashcardState("Flashcards");
 
                 if (counter === decks[selectedDeck].length + 1) {
-                    if (incorrectFlag) return setCurrentScreenCall(<FailureScreen />);
-                    else setCurrentScreenCall(<SuccessScreen />);
+                    if (correct >= goal) return setCurrentScreenCall(<SuccessScreen />);
+                    else setCurrentScreenCall(<FailureScreen />);
                 }
             }
         }} />;

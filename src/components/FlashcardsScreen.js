@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import Flashcard from './Flashcard';
 
-export default function FlashcardsScreen({ children: selectedDeck, setCurrentScreenCall }) {
+export default function FlashcardsScreen({ children: [selectedDeck, goal], setCurrentScreenCall }) {
     const [counter, setCounter] = useState(1);
 
     return (
@@ -9,6 +9,7 @@ export default function FlashcardsScreen({ children: selectedDeck, setCurrentScr
             {counter}
             {setCounter}
             {selectedDeck}
+            {goal}
         </Flashcard>
     )
 }

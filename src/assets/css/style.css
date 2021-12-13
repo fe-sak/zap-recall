@@ -43,6 +43,16 @@ main {
     margin-bottom: 20vh;
 }
 
+.StartScreen input {
+    width: 345px;
+    height: 49px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    border: 1px solid black;
+    padding-left: 10px;
+}
+
+
 
 .Deck {
     width: 345px;
