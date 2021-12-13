@@ -1,5 +1,5 @@
 import { useState } from "react";
-import minilogo from "./LogoMini";
+import minilogo from "../assets/img/logo-mini.png";
 import StartScreen from "./StartScreen";
 
 export default function App() {
