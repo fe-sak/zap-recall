@@ -34,7 +34,7 @@ export default function Flashcard({ children: [counter, setCounter, selectedDeck
             return <FlashcardFooter setFlashcardStateCall={setFlashcardStateCall} />
         }
 
-        else return <img id="button" src={turn} alt="flip card button" data-identifier="arrow" onClick={() => { //TODO
+        else return <img id="button" src={turn} alt="flip card button" data-identifier="arrow" onClick={() => {
             if (FlashcardState === "Flashcards") {
                 setQuestionOrAnswer("answer");
             }
