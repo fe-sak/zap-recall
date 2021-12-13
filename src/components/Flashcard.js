@@ -12,7 +12,7 @@ export default function Flashcard({ children: [counter, setCounter, selectedDeck
     const [FlashcardState, setFlashcardState] = useState("Flashcards");
 
     if (FlashcardState === "Flashcards zap") correct++;
-
+    console.log("correct:" + correct);
     function setFlashcardStateCall(state) {
         return setFlashcardState(state)
     }
@@ -45,8 +45,9 @@ export default function Flashcard({ children: [counter, setCounter, selectedDeck
                 setFlashcardState("Flashcards");
 
                 if (counter === decks[selectedDeck].length + 1) {
-                    if (correct >= goal) return setCurrentScreenCall(<SuccessScreen />);
-                    else setCurrentScreenCall(<FailureScreen />);
+                    if (correct >= goal) setCurrentScreenCall(<SuccessScreen setCurrentScreenCall={setCurrentScreenCall} />);
+                    else setCurrentScreenCall(<FailureScreen setCurrentScreenCall={setCurrentScreenCall} />);
+                    correct = 0;
                 }
             }
         }} />;

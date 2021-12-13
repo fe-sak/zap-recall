@@ -10,12 +10,14 @@ export default function StartScreen({ setCurrentScreenCall }) {
     return (
         <div className="StartScreen">
             <img src={logo} alt="site logo" />
+
             <input type="number" min="1"
                 placeholder="Sua meta de zaps"
                 value={inputValue}
                 onChange={e => {
                     setInputValue(e.target.value)
                 }} />
+
             {decks.map((deck) =>
                 <Deck setCurrentScreenCall={setCurrentScreenCall}>
                     {deck}
@@ -26,6 +28,7 @@ export default function StartScreen({ setCurrentScreenCall }) {
 }
 
 function Deck({ children: [deck, goal], setCurrentScreenCall }) {
+    console.log(goal);
     return (
         <div className="Deck" data-identifier="start-zap-recall" onClick={() => {
             if (goal >= 1) {
@@ -39,7 +42,7 @@ function Deck({ children: [deck, goal], setCurrentScreenCall }) {
         }
         }>
             <div>
-                {deck}
+                <span>{deck}</span>
                 <img src={next} alt="emoticon" />
             </div>
         </div>

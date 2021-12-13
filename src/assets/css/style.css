@@ -188,6 +188,7 @@ main {
     width: 100vw;
     height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -195,6 +196,7 @@ main {
 .Success .container, .Failure .container {
     text-align: center;
     width: 424px;
+    margin-bottom: 20px;
 }
 
 .container>div {
