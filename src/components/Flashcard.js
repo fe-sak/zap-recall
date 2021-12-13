@@ -12,7 +12,7 @@ export default function Flashcard({ children: [counter, setCounter, selectedDeck
     const [FlashcardState, setFlashcardState] = useState("Flashcards");
 
     if (FlashcardState === "Flashcards zap") correct++;
-    console.log("correct:" + correct);
+
     function setFlashcardStateCall(state) {
         return setFlashcardState(state)
     }

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import MiniLogo from "./LogoMini";
+import minilogo from "./LogoMini";
 import StartScreen from "./StartScreen";
 
 export default function App() {
@@ -9,11 +9,10 @@ export default function App() {
         return setCurrentScreen(component);
     }
 
-
     return (
         <>
             <main>
-                <MiniLogo />
+                <img className="MiniLogo" src={minilogo} alt="mini logo site" />
                 {currentScreen}
             </main>
         </>
