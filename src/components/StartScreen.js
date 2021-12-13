@@ -2,10 +2,13 @@ import { useState } from 'react'
 import logo from '../assets/img/logo.png'
 import next from '../assets/img/next.png'
 import FlashcardsScreen from './FlashcardsScreen';
+import decksCollection from './decksCollection';
 
 export default function StartScreen({ setCurrentScreenCall }) {
-    const [decks, setDecks] = useState(['Praticar React']);
+    const [decks, setDecks] = useState(Object.getOwnPropertyNames(decksCollection()));
     const [inputValue, setInputValue] = useState("");
+
+    console.log(decks);
 
     return (
         <div className="StartScreen">

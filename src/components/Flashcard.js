@@ -1,7 +1,7 @@
+import { useState } from "react/cjs/react.development";
 import decksCollection from "./decksCollection"
 import turn from "../assets/img/turn.png"
 import FlashcardFooter from "./FlashcardFooter";
-import { useState } from "react/cjs/react.development";
 import SuccessScreen from "./SuccessScreen";
 import FailureScreen from "./FailureScreen";
 

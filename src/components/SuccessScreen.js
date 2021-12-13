@@ -2,7 +2,7 @@ import party from '../assets/img/party.png'
 import next from '../assets/img/next.png'
 import StartScreen from './StartScreen'
 
-export default function ({ setCurrentScreenCall }) {
+export default function SuccessScreen({ setCurrentScreenCall }) {
     return (
         <div className="Success">
             <div className="container">

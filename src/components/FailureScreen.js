@@ -2,7 +2,7 @@ import sad from '../assets/img/sad.png'
 import next from '../assets/img/next.png'
 import StartScreen from './StartScreen'
 
-export default function ({ setCurrentScreenCall }) {
+export default function FailureScreen({ setCurrentScreenCall }) {
     return (
         <div className="Failure">
             <div className="container">
