@@ -5,7 +5,7 @@ export default function () {
         <div className="Success">
             <div className="container">
                 <div>
-                    <span>parabéns!</span>
+                    <span>PARABÉNS!</span>
                     <img src={party} alt="party emoji" />
                 </div>
                 <span>Você não esqueceu de nenhum flashcard!</span>

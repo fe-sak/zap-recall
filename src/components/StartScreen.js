@@ -17,7 +17,7 @@ export default function StartScreen({ setCurrentScreenCall }) {
 function Deck({ children: deck, setCurrentScreenCall }) {
 
     return (
-        <div className="Deck" onClick={() => setCurrentScreenCall(<FlashcardsScreen setCurrentScreenCall={setCurrentScreenCall}>
+        <div className="Deck" data-identifier="start-zap-recall" onClick={() => setCurrentScreenCall(<FlashcardsScreen setCurrentScreenCall={setCurrentScreenCall}>
             {deck}
         </FlashcardsScreen>)}>
             <div>

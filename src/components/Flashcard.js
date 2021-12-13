@@ -35,7 +35,7 @@ export default function Flashcard({ children: [counter, setCounter, selectedDeck
             return <FlashcardFooter setFlashcardStateCall={setFlashcardStateCall} />
         }
 
-        else return <img id="button" src={turn} alt="flip card button" onClick={() => { //TODO
+        else return <img id="button" src={turn} alt="flip card button" data-identifier="arrow" onClick={() => { //TODO
             if (FlashcardState === "Flashcards") {
                 setQuestionOrAnswer("answer");
             }
@@ -54,10 +54,10 @@ export default function Flashcard({ children: [counter, setCounter, selectedDeck
     }
 
     return (
-        <div className={FlashcardState}>
-            <div className="Flashcard">
+        <div className={FlashcardState} >
+            <div className="Flashcard" data-identifier="flashcard">
                 {flashcardHeader()}
-                <span id="counter">{counter}/{decks[selectedDeck].length}</span>
+                <span data-identifier="counter" id="counter">{counter}/{decks[selectedDeck].length}</span>
                 <span id={questionOrAnswer === "question" ? "question" : "answer"}>{decks[selectedDeck][counter - 1][questionOrAnswer]}</span>
                 {flashcardFooter()}
             </div>
