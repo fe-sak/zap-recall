@@ -173,3 +173,32 @@ main {
 .FlashcardFooter div:nth-child(4) {
     border: 3px solid #FFEF61
 }
+
+.Success, .Failure {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Success .container, .Failure .container {
+    text-align: center;
+    width: 424px;
+}
+
+.container>div {
+    margin-bottom: 16px;
+}
+
+.Success .container>div span {
+    text-transform: uppercase;
+}
+
+.container>div span {
+    font: 700 36px roboto;
+}
+
+.container>span {
+    font: 400 22px roboto;
+}

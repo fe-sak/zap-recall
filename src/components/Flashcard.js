@@ -2,17 +2,17 @@ import decksCollection from "./decksCollection"
 import turn from "../assets/img/turn.png"
 import FlashcardFooter from "./FlashcardFooter";
 import { useState } from "react/cjs/react.development";
-import FlashcardsScreen from "./FlashcardsScreen";
 import SuccessScreen from "./SuccessScreen";
 import FailureScreen from "./FailureScreen";
+
+let incorrectFlag = false;
 
 export default function Flashcard({ children: [counter, setCounter, selectedDeck], setCurrentScreenCall }) {
     const [questionOrAnswer, setQuestionOrAnswer] = useState("question");
     const [FlashcardState, setFlashcardState] = useState("Flashcards");
-    const [incorrectFlag, setIncorrectFlag] = useState(false);
 
-    if (FlashcardState === "Flashcards incorrect") setIncorrectFlag(true);
-    console.log(incorrectFlag);
+    if (FlashcardState === "Flashcards incorrect") incorrectFlag = true;
+    console.log(incorrectFlag)
 
     function setFlashcardStateCall(state) {
         return setFlashcardState(state)
